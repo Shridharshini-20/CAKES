@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recipe Sharing Website</title>
+  <link rel="stylesheet" href="shri.css">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <h1>JUST TEMPT!!</h1>
+    <p>Discover and share delicious recipes!</p>
+  </header>
+
+  <!-- Search Bar -->
+  <section class="search-bar">
+    <input type="text" id="search" placeholder="Search for recipes..." oninput="filterRecipes()">
+  </section>
+
+  <!-- Recipe Grid -->
+  <section class="recipe-grid" id="recipeGrid">
+    <!-- Example Recipe Cards -->
+    <div class="recipe-card" onclick="viewRecipe('Pancakes')">
+      <img src="i1.jpeg" alt="Pancakes">
+      <h3>Pancakes</h3>
+      <p>A classic breakfast favorite.</p>
+    </div>
+    <div class="recipe-card" onclick="viewRecipe('Spaghetti Bolognese')">
+      <img src="i2.jpeg" alt="Spaghetti">
+      <h3>Spaghetti Bolognese</h3>
+      <p>Rich and hearty Italian classic.</p>
+    </div>
+    <div class="recipe-card" onclick="viewRecipe('Chocolate Cake')">
+      <img src="i3.jpeg" alt="Chocolate Cake">
+      <h3>Chocolate Cake</h3>
+      <p>Decadent and moist dessert.</p>
+    </div>
+  </section>
+
+  <!-- Submit Recipe Section -->
+  <section class="submit-recipe">
+    <h2>Share Your Recipe</h2>
+    <form id="recipeForm">
+      <label for="recipeName">Recipe Name:</label>
+      <input type="text" id="recipeName" required>
+
+      <label for="ingredients">Ingredients:</label>
+      <textarea id="ingredients" rows="4" required></textarea>
+
+      <label for="instructions">Instructions:</label>
+      <textarea id="instructions" rows="6" required></textarea>
+
+      <button type="submit">Submit Recipe</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2024 Recipe Sharing Website | All Rights Reserved</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
